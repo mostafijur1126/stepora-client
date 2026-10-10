@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
 :root {
+  /* Main colors */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111111;
+
+  /* Button colors */
+  --button-background: #dce9df;
+  --button-foreground: #173b2b;
+  --button-hover: #c9ddce;
+
+  /* Borders and surfaces */
+  --border: #e5e7eb;
+  --muted: #f7f8f6;
+  --muted-foreground: #6b7280;
+
+  /* Focus ring */
+  --ring: #8cae98;
 }
 
 @theme inline {
+  /* Main colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* Buttons */
+  --color-button: var(--button-background);
+  --color-button-text: var(--button-foreground);
+  --color-button-hover: var(--button-hover);
+
+  /* Other UI colors */
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-ring: var(--ring);
+
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
 }
